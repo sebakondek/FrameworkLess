@@ -11,14 +11,14 @@ java {
 }
 
 ext {
-    javaMainClass = "org.modak.challenge.ModakChallengeApplication"
+    javaMainClass = "org.framework.less.FrameworkLessApplication"
 }
 
 application {
     getMainClass().set(javaMainClass)
 }
 
-group 'org.example'
+group 'org.frameworl.less'
 version '1.0-SNAPSHOT'
 
 repositories {
