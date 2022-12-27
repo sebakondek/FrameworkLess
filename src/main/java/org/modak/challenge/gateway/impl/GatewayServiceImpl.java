@@ -1,9 +1,10 @@
 package org.modak.challenge.gateway.impl;
 
-import com.google.inject.Singleton;
 import org.modak.challenge.gateway.GatewayService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import javax.inject.Singleton;
 
 @Singleton
 public class GatewayServiceImpl implements GatewayService {

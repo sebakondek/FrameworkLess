@@ -17,11 +17,11 @@ public class SqlModule extends AbstractModule {
 
     @Override
     protected void configure() {
-        LOGGER.info("Initializing database");
+        LOGGER.info("Initializing Database");
 
         bind(DataSource.class).toInstance(this.getDataSource());
 
-        LOGGER.info("Successfully initialized database");
+        LOGGER.info("Successfully initialized Database");
     }
 
     private DataSource getDataSource() {
