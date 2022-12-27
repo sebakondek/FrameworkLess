@@ -13,7 +13,7 @@ public class NotificationServiceImpl implements NotificationService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(NotificationServiceImpl.class);
 
-    private GatewayService gatewayService;
+    private final GatewayService gatewayService;
 
     @Inject
     public NotificationServiceImpl( GatewayService gatewayService) {
@@ -22,6 +22,6 @@ public class NotificationServiceImpl implements NotificationService {
 
     @Override
     public void send(String type, Integer userId, String message) {
-        gatewayService.send(userId, message);
+        this.gatewayService.send(userId, message);
     }
 }

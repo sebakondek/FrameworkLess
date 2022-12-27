@@ -2,13 +2,15 @@ package org.modak.challenge;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
+import org.modak.challenge.config.Config;
 import org.modak.challenge.config.RepositoryModule;
 import org.modak.challenge.config.ServiceModule;
+import org.modak.challenge.config.SqlModule;
 import org.modak.challenge.notification.NotificationService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class ModakChallengeApplication {
+public class ModakChallengeApplication extends Config {
     public static final Injector APP = injectDependencies();
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ModakChallengeApplication.class);
@@ -16,7 +18,8 @@ public class ModakChallengeApplication {
     private static Injector injectDependencies() {
         return Guice.createInjector(
                 new ServiceModule(),
-                new RepositoryModule()
+                new RepositoryModule(),
+                new SqlModule()
         );
     }
 
